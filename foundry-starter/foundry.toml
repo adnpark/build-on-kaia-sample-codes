@@ -2,16 +2,12 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+remappings = ["solady/=lib/solady/src/"]
 
 [rpc_endpoints]
 kairos = "${KAIROS_RPC_URL}"
 
 [etherscan]
 kairos = { key = "${KAIA_SCAN_API_KEY}" }
-
-# Hardware wallet configuration
-[hardware_wallet]
-ledger = true
-trezor = false
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
