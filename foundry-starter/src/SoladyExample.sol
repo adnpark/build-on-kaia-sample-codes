@@ -23,7 +23,7 @@ contract SoladyExample is ReentrancyGuard {
 
     // Using SafeTransferLib for safe ETH transfers
     function sendETH(address payable to, uint256 amount) public nonReentrant {
-        to.safeTransferETH(amount);
+        SafeTransferLib.safeTransferETH(to, amount);
     }
 
     // Using ReentrancyGuard for security
